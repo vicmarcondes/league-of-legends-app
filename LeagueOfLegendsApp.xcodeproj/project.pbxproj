@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8412C4BC2BBA5D9A00EC1F14 /* ChampionsViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412C4BB2BBA5D9A00EC1F14 /* ChampionsViewScreen.swift */; };
+		8412C4BF2BBAE5A600EC1F14 /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412C4BE2BBAE5A600EC1F14 /* Champion.swift */; };
+		8412C4C22BBAE61000EC1F14 /* ChampionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412C4C12BBAE61000EC1F14 /* ChampionsService.swift */; };
+		8412C4C52BBAE91100EC1F14 /* ChampionsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412C4C42BBAE91100EC1F14 /* ChampionsCollectionViewCell.swift */; };
+		8412C4C82BBAF7F900EC1F14 /* UICollectionViewFlowLayout + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412C4C72BBAF7F900EC1F14 /* UICollectionViewFlowLayout + Extension.swift */; };
 		842A4D9A2BBA550600AF602D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4D992BBA550600AF602D /* AppDelegate.swift */; };
 		842A4D9C2BBA550600AF602D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4D9B2BBA550600AF602D /* SceneDelegate.swift */; };
-		842A4D9E2BBA550600AF602D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4D9D2BBA550600AF602D /* ViewController.swift */; };
+		842A4D9E2BBA550600AF602D /* ChampionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4D9D2BBA550600AF602D /* ChampionsViewController.swift */; };
 		842A4DA32BBA550800AF602D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842A4DA22BBA550800AF602D /* Assets.xcassets */; };
 		842A4DA62BBA550800AF602D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842A4DA42BBA550800AF602D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8412C4BB2BBA5D9A00EC1F14 /* ChampionsViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsViewScreen.swift; sourceTree = "<group>"; };
+		8412C4BE2BBAE5A600EC1F14 /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
+		8412C4C12BBAE61000EC1F14 /* ChampionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsService.swift; sourceTree = "<group>"; };
+		8412C4C42BBAE91100EC1F14 /* ChampionsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsCollectionViewCell.swift; sourceTree = "<group>"; };
+		8412C4C72BBAF7F900EC1F14 /* UICollectionViewFlowLayout + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewFlowLayout + Extension.swift"; sourceTree = "<group>"; };
 		842A4D962BBA550600AF602D /* LeagueOfLegendsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeagueOfLegendsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842A4D992BBA550600AF602D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842A4D9B2BBA550600AF602D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		842A4D9D2BBA550600AF602D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		842A4D9D2BBA550600AF602D /* ChampionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsViewController.swift; sourceTree = "<group>"; };
 		842A4DA22BBA550800AF602D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842A4DA52BBA550800AF602D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		842A4DA72BBA550800AF602D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +45,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8412C4B52BBA5B2300EC1F14 /* Champions */ = {
+			isa = PBXGroup;
+			children = (
+				8412C4C32BBAE78900EC1F14 /* Cell */,
+				8412C4B92BBA5D1F00EC1F14 /* Controller */,
+				8412C4B82BBA5D1700EC1F14 /* View */,
+				8412C4B72BBA5B4C00EC1F14 /* Model */,
+			);
+			path = Champions;
+			sourceTree = "<group>";
+		};
+		8412C4B72BBA5B4C00EC1F14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8412C4B82BBA5D1700EC1F14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8412C4BB2BBA5D9A00EC1F14 /* ChampionsViewScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8412C4B92BBA5D1F00EC1F14 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				842A4D9D2BBA550600AF602D /* ChampionsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8412C4BD2BBAE59500EC1F14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8412C4BE2BBAE5A600EC1F14 /* Champion.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8412C4C02BBAE5FA00EC1F14 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8412C4C12BBAE61000EC1F14 /* ChampionsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8412C4C32BBAE78900EC1F14 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8412C4C42BBAE91100EC1F14 /* ChampionsCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8412C4C62BBAF7CD00EC1F14 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8412C4C72BBAF7F900EC1F14 /* UICollectionViewFlowLayout + Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		842A4D8D2BBA550600AF602D = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +130,12 @@
 		842A4D982BBA550600AF602D /* LeagueOfLegendsApp */ = {
 			isa = PBXGroup;
 			children = (
+				8412C4C62BBAF7CD00EC1F14 /* Extensions */,
+				8412C4C02BBAE5FA00EC1F14 /* Service */,
+				8412C4BD2BBAE59500EC1F14 /* Model */,
+				8412C4B52BBA5B2300EC1F14 /* Champions */,
 				842A4D992BBA550600AF602D /* AppDelegate.swift */,
 				842A4D9B2BBA550600AF602D /* SceneDelegate.swift */,
-				842A4D9D2BBA550600AF602D /* ViewController.swift */,
 				842A4DA22BBA550800AF602D /* Assets.xcassets */,
 				842A4DA42BBA550800AF602D /* LaunchScreen.storyboard */,
 				842A4DA72BBA550800AF602D /* Info.plist */,
@@ -134,7 +213,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				842A4D9E2BBA550600AF602D /* ViewController.swift in Sources */,
+				8412C4C22BBAE61000EC1F14 /* ChampionsService.swift in Sources */,
+				8412C4BF2BBAE5A600EC1F14 /* Champion.swift in Sources */,
+				8412C4C82BBAF7F900EC1F14 /* UICollectionViewFlowLayout + Extension.swift in Sources */,
+				842A4D9E2BBA550600AF602D /* ChampionsViewController.swift in Sources */,
+				8412C4BC2BBA5D9A00EC1F14 /* ChampionsViewScreen.swift in Sources */,
+				8412C4C52BBAE91100EC1F14 /* ChampionsCollectionViewCell.swift in Sources */,
 				842A4D9A2BBA550600AF602D /* AppDelegate.swift in Sources */,
 				842A4D9C2BBA550600AF602D /* SceneDelegate.swift in Sources */,
 			);
