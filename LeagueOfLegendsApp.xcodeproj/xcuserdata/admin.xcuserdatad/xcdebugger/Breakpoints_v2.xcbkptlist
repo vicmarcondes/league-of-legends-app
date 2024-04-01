@@ -7,17 +7,269 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A8D49183-44F7-42F4-AEEE-1B2E11D0EDAF"
-            shouldBeEnabled = "Yes"
+            uuid = "E1FB5855-3746-43C9-A24E-5AE74492C163"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeagueOfLegendsApp/Service/ChampionsService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "getChampions(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E1FB5855-3746-43C9-A24E-5AE74492C163 - ad563f58df9c4006"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeagueOfLegendsApp.HomeService.getChampions(completion: (Swift.Optional&lt;LeagueOfLegendsApp.ChampionsData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "LeagueOfLegendsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Personal%20Projects/LeagueOfLegendsApp/LeagueOfLegendsApp/Service/ChampionsService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "557">
+               </Location>
+               <Location
+                  uuid = "E1FB5855-3746-43C9-A24E-5AE74492C163 - b5fc927f7c79e398"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LeagueOfLegendsApp.HomeService.getChampions(completion: (Swift.Optional&lt;LeagueOfLegendsApp.ChampionsData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "LeagueOfLegendsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Personal%20Projects/LeagueOfLegendsApp/LeagueOfLegendsApp/Service/ChampionsService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "243">
+               </Location>
+               <Location
+                  uuid = "E1FB5855-3746-43C9-A24E-5AE74492C163 - 68d3939b7dc0efd4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeagueOfLegendsApp.ChampionsService.getChampions(completion: (Swift.Optional&lt;LeagueOfLegendsApp.ChampionsData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "LeagueOfLegendsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Personal%20Projects/LeagueOfLegendsApp/LeagueOfLegendsApp/Service/ChampionsService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "557">
+               </Location>
+               <Location
+                  uuid = "E1FB5855-3746-43C9-A24E-5AE74492C163 - 78aa707deb6333ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LeagueOfLegendsApp.ChampionsService.getChampions(completion: (Swift.Optional&lt;LeagueOfLegendsApp.ChampionsData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "LeagueOfLegendsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Personal%20Projects/LeagueOfLegendsApp/LeagueOfLegendsApp/Service/ChampionsService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "243">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84B48961-F25E-4942-B834-19F9780F936D"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LeagueOfLegendsApp/Champions/Controller/ChampionsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "ChampionsViewController"
-            landmarkType = "21">
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "fetchAllRequest()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "84B48961-F25E-4942-B834-19F9780F936D - cd2e594760aea9dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;LeagueOfLegendsApp.ChampionsData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LeagueOfLegendsApp.ChampionsViewController.fetchAllRequest() -&gt; ()"
+                  moduleName = "LeagueOfLegendsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Personal%20Projects/LeagueOfLegendsApp/LeagueOfLegendsApp/Champions/Controller/ChampionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "118">
+               </Location>
+               <Location
+                  uuid = "84B48961-F25E-4942-B834-19F9780F936D - cd2e594760aea9fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;LeagueOfLegendsApp.ChampionsData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LeagueOfLegendsApp.ChampionsViewController.fetchAllRequest() -&gt; ()"
+                  moduleName = "LeagueOfLegendsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Personal%20Projects/LeagueOfLegendsApp/LeagueOfLegendsApp/Champions/Controller/ChampionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "84B48961-F25E-4942-B834-19F9780F936D - cd2e594760aea9fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;LeagueOfLegendsApp.ChampionsData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LeagueOfLegendsApp.ChampionsViewController.fetchAllRequest() -&gt; ()"
+                  moduleName = "LeagueOfLegendsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Personal%20Projects/LeagueOfLegendsApp/LeagueOfLegendsApp/Champions/Controller/ChampionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  uuid = "84B48961-F25E-4942-B834-19F9780F936D - ec035c2f8299a9c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (LeagueOfLegendsApp.Champion) -&gt; LeagueOfLegendsApp.Champion in closure #1 (Swift.Optional&lt;LeagueOfLegendsApp.ChampionsData&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LeagueOfLegendsApp.ChampionsViewController.fetchAllRequest() -&gt; ()"
+                  moduleName = "LeagueOfLegendsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Personal%20Projects/LeagueOfLegendsApp/LeagueOfLegendsApp/Champions/Controller/ChampionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "628">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D47C6638-B19C-4E95-8A71-96E3AF446082"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeagueOfLegendsApp/Champions/Controller/ChampionsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D47C6638-B19C-4E95-8A71-96E3AF446082 - 78cf64f7c7eea19e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeagueOfLegendsApp.ChampionsViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "LeagueOfLegendsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Personal%20Projects/LeagueOfLegendsApp/LeagueOfLegendsApp/Champions/Controller/ChampionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "197">
+               </Location>
+               <Location
+                  uuid = "D47C6638-B19C-4E95-8A71-96E3AF446082 - 4eb5d5b77cb64c0e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeagueOfLegendsApp.ChampionsViewController.collectionView(_: __C.UICollectionView, numberOfItemsInSection: Swift.Int) -&gt; Swift.Int"
+                  moduleName = "LeagueOfLegendsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Personal%20Projects/LeagueOfLegendsApp/LeagueOfLegendsApp/Champions/Controller/ChampionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F24531D4-C13A-4A22-9588-EE65172DA2E5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeagueOfLegendsApp/Champions/Controller/ChampionsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "fetchAllRequest()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84126ED4-5C8C-4FCC-A097-0579FD6363E6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LeagueOfLegendsApp/Champions/Controller/ChampionsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "84126ED4-5C8C-4FCC-A097-0579FD6363E6 - 19a2c2cae116e66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeagueOfLegendsApp.ChampionsViewController.collectionView(_: __C.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "LeagueOfLegendsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Personal%20Projects/LeagueOfLegendsApp/LeagueOfLegendsApp/Champions/Controller/ChampionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "179">
+               </Location>
+               <Location
+                  uuid = "84126ED4-5C8C-4FCC-A097-0579FD6363E6 - 78cf64f7c7eea212"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LeagueOfLegendsApp.ChampionsViewController.collectionView(_: __C.UICollectionView, cellForItemAt: Foundation.IndexPath) -&gt; __C.UICollectionViewCell"
+                  moduleName = "LeagueOfLegendsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/admin/Documents/Personal%20Projects/LeagueOfLegendsApp/LeagueOfLegendsApp/Champions/Controller/ChampionsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "522">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

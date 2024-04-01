@@ -14,7 +14,7 @@ class ChampionsCollectionViewCell: UICollectionViewCell {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.contentMode = .scaleAspectFill
-        image.layer.cornerRadius = 20
+//        image.layer.cornerRadius = 50
         return image
     }()
     
@@ -22,7 +22,7 @@ class ChampionsCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        label.textColor = .black    
+        label.textColor = .white
         return label
     }()
     
@@ -38,7 +38,6 @@ class ChampionsCollectionViewCell: UICollectionViewCell {
     }
     
     func setupCell(champion: Champion) {
-        imageView.image = champion.image
         nameLabel.text = champion.name
     }
     

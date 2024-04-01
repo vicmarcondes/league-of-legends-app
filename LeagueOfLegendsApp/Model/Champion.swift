@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-struct Champion {
-    let name: String;
-    let image: UIImage?;
+struct Champion: Codable {
+    let id: String
+    let key: String
+    let name: String
 }

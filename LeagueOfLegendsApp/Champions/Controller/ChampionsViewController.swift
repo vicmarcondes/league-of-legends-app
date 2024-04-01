@@ -6,48 +6,86 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ChampionsViewController: UIViewController {
     var screen: ChampionsViewScreen?
-    var champions: [Champion] = [
-        Champion(name: "Akali", image: UIImage(named: "Akali")),
-        Champion(name: "Akali", image: UIImage(named: "Akali")),
-        Champion(name: "Akali", image: UIImage(named: "Akali")),
-        Champion(name: "Akali", image: UIImage(named: "Akali")),
-        Champion(name: "Akali", image: UIImage(named: "Akali")),
-        Champion(name: "Akali", image: UIImage(named: "Akali")),
-    ]
+    var champions: [Champion]?
+    var championsFiltered: [Champion]?
+    var service = ChampionsService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        screen?.configCollectionView(delegate: self, dataSource: self)
+        fetchAllRequest()
     }
     
     override func loadView() {
         screen = ChampionsViewScreen()
+        screen?.configureTextFieldDelegate(delegate: self)
         view = screen
+    }
+    
+    func fetchAllRequest() {
+        service.getChampions { championsData, error in
+            if error == nil {
+                var arrayFromDic = championsData!.data.values.map { $0 }
+                arrayFromDic.sort { c1, c2 in
+                    c1.name < c2.name
+                }
+                self.champions = arrayFromDic
+                self.championsFiltered = self.champions
+                
+                
+                DispatchQueue.main.async {
+                    self.screen?.configCollectionView(delegate: self, dataSource: self)
+                }
+            } else {
+//                self.delegate?.error()
+            }
+        }
     }
 }
 
+
+
 extension ChampionsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return champions.count
+        return championsFiltered?.count ?? 0
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
-//        let space: CGFloat = (flowayout?.minimumInteritemSpacing ?? 0.0) + (flowayout?.sectionInset.left ?? 0.0) + (flowayout?.sectionInset.right ?? 0.0)
-//        let size:CGFloat = (collectionView.frame.size.width - space) / 2.0
-//        return CGSize(width: size, height: size)
-        
-//        return CGSize(width: collectionView.frame.size.width, height: 300)
-//    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChampionsCollectionViewCell.identifier, for: indexPath) as? ChampionsCollectionViewCell
-        cell?.setupCell(champion: champions[indexPath.row])
-        return cell ?? UICollectionViewCell()
+        let champion = championsFiltered![indexPath.row] as Champion
         
+        cell?.imageView.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/\(champion.id)_0.jpg"), placeholderImage: UIImage(named: "placeholder.png"))
+        cell?.setupCell(champion: champion)
+        return cell ?? UICollectionViewCell()
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = ChampionDetailController()
+        let selectedChampion = championsFiltered![indexPath.row]
+        vc.championId = selectedChampion.id
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+}
+
+extension ChampionsViewController: UITextFieldDelegate {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard let text = textField.text else {return}
+        
+        
+        if !text.isEmpty {
+            championsFiltered = champions?.filter({ champion in
+                return champion.name.contains(text)
+            })
+        } else {
+            championsFiltered = champions
+        }
+        
+        
+        
+        screen?.collectionView.reloadData()
+    }
 }
