@@ -6,48 +6,61 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ChampionsViewController: UIViewController {
     var screen: ChampionsViewScreen?
-    var champions: [Champion] = [
-        Champion(name: "Akali", image: UIImage(named: "Akali")),
-        Champion(name: "Akali", image: UIImage(named: "Akali")),
-        Champion(name: "Akali", image: UIImage(named: "Akali")),
-        Champion(name: "Akali", image: UIImage(named: "Akali")),
-        Champion(name: "Akali", image: UIImage(named: "Akali")),
-        Champion(name: "Akali", image: UIImage(named: "Akali")),
-    ]
+    var champions: [Champion]?
+    var service = ChampionsService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        screen?.configCollectionView(delegate: self, dataSource: self)
+        fetchAllRequest()
     }
     
     override func loadView() {
         screen = ChampionsViewScreen()
         view = screen
     }
+    
+    func fetchAllRequest() {
+        service.getChampions { championsData, error in
+            if error == nil {
+                var arrayFromDic = championsData!.data.values.map { $0 }
+                arrayFromDic.sort { c1, c2 in
+                    c1.name < c2.name
+                }
+                self.champions = arrayFromDic
+                
+                
+                DispatchQueue.main.async {
+                    self.screen?.configCollectionView(delegate: self, dataSource: self)
+                }
+            } else {
+//                self.delegate?.error()
+            }
+        }
+    }
 }
+
+
 
 extension ChampionsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return champions.count
+        return champions?.count ?? 0
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let flowayout = collectionViewLayout as? UICollectionViewFlowLayout
-//        let space: CGFloat = (flowayout?.minimumInteritemSpacing ?? 0.0) + (flowayout?.sectionInset.left ?? 0.0) + (flowayout?.sectionInset.right ?? 0.0)
-//        let size:CGFloat = (collectionView.frame.size.width - space) / 2.0
-//        return CGSize(width: size, height: size)
-        
-//        return CGSize(width: collectionView.frame.size.width, height: 300)
-//    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChampionsCollectionViewCell.identifier, for: indexPath) as? ChampionsCollectionViewCell
-        cell?.setupCell(champion: champions[indexPath.row])
-        return cell ?? UICollectionViewCell()
+        let champion = champions![indexPath.row] as Champion
         
+        cell?.imageView.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/\(champion.id)_0.jpg"), placeholderImage: UIImage(named: "placeholder.png"))
+        cell?.setupCell(champion: champion)
+        return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
     }
     
 }
