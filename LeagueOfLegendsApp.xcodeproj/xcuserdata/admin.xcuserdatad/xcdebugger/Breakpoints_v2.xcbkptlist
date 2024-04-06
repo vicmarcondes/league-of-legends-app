@@ -92,8 +92,13 @@
             filePath = "LeagueOfLegendsApp/Champions/Controller/ChampionsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+<<<<<<< HEAD
             startingLineNumber = "31"
             endingLineNumber = "31"
+=======
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+>>>>>>> main
             landmarkName = "fetchAllRequest()"
             landmarkType = "7">
             <Locations>
@@ -170,8 +175,13 @@
             filePath = "LeagueOfLegendsApp/Champions/Controller/ChampionsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+<<<<<<< HEAD
             startingLineNumber = "53"
             endingLineNumber = "53"
+=======
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+>>>>>>> main
             landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
             <Locations>
@@ -218,8 +228,13 @@
             filePath = "LeagueOfLegendsApp/Champions/Controller/ChampionsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+<<<<<<< HEAD
             startingLineNumber = "42"
             endingLineNumber = "42"
+=======
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+>>>>>>> main
             landmarkName = "fetchAllRequest()"
             landmarkType = "7">
          </BreakpointContent>
@@ -234,8 +249,13 @@
             filePath = "LeagueOfLegendsApp/Champions/Controller/ChampionsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+<<<<<<< HEAD
             startingLineNumber = "61"
             endingLineNumber = "61"
+=======
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+>>>>>>> main
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
             <Locations>

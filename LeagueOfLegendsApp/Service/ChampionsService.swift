@@ -44,6 +44,7 @@ class ChampionsService {
         
         task.resume()
     }
+<<<<<<< HEAD
 
     func getChampionDetail(championId: String, completion: @escaping (ChampionDetailData?, Error?) -> Void) {
         let urlString = "https://ddragon.leagueoflegends.com/cdn/14.6.1/data/pt_BR/champion/\(championId).json"
@@ -74,5 +75,7 @@ class ChampionsService {
         
         task.resume()
     }
+=======
+>>>>>>> main
     
 }

@@ -11,7 +11,10 @@ import SDWebImage
 class ChampionsViewController: UIViewController {
     var screen: ChampionsViewScreen?
     var champions: [Champion]?
+<<<<<<< HEAD
     var championsFiltered: [Champion]?
+=======
+>>>>>>> main
     var service = ChampionsService()
     
     override func viewDidLoad() {
@@ -33,7 +36,10 @@ class ChampionsViewController: UIViewController {
                     c1.name < c2.name
                 }
                 self.champions = arrayFromDic
+<<<<<<< HEAD
                 self.championsFiltered = self.champions
+=======
+>>>>>>> main
                 
                 
                 DispatchQueue.main.async {
@@ -50,12 +56,20 @@ class ChampionsViewController: UIViewController {
 
 extension ChampionsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+<<<<<<< HEAD
         return championsFiltered?.count ?? 0
+=======
+        return champions?.count ?? 0
+>>>>>>> main
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChampionsCollectionViewCell.identifier, for: indexPath) as? ChampionsCollectionViewCell
+<<<<<<< HEAD
         let champion = championsFiltered![indexPath.row] as Champion
+=======
+        let champion = champions![indexPath.row] as Champion
+>>>>>>> main
         
         cell?.imageView.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/\(champion.id)_0.jpg"), placeholderImage: UIImage(named: "placeholder.png"))
         cell?.setupCell(champion: champion)
@@ -63,10 +77,14 @@ extension ChampionsViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+<<<<<<< HEAD
         let vc = ChampionDetailController()
         let selectedChampion = championsFiltered![indexPath.row]
         vc.championId = selectedChampion.id
         navigationController?.pushViewController(vc, animated: true)
+=======
+        print(indexPath.row)
+>>>>>>> main
     }
     
 }
