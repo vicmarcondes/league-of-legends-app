@@ -9,11 +9,9 @@ import Foundation
 import UIKit
 
 struct Champion: Codable {
-<<<<<<< HEAD
     let id: String
     let key: String
     let name: String
-=======
     let version: String
     let id: String
     let key: String
@@ -33,5 +31,4 @@ struct Image: Codable {
     let y: Int
     let w: Int
     let h: Int
->>>>>>> main
 }
