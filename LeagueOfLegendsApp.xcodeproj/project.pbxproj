@@ -8,13 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		596490B31834D4EA6E6C4745 /* Pods_LeagueOfLegendsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BCEC195A5FB68BAE07CF25 /* Pods_LeagueOfLegendsApp.framework */; };
-<<<<<<< HEAD
 		840AE79C2BBB3D820076F89E /* ChampionDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840AE79B2BBB3D820076F89E /* ChampionDetailController.swift */; };
 		840AE79E2BBC31710076F89E /* ChampionDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840AE79D2BBC31710076F89E /* ChampionDetailScreen.swift */; };
 		840AE7A02BBC434D0076F89E /* ChampionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840AE79F2BBC434D0076F89E /* ChampionDetail.swift */; };
 		840AE7A22BBC43620076F89E /* ChampionDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840AE7A12BBC43620076F89E /* ChampionDetailData.swift */; };
-=======
->>>>>>> main
 		8412C4BC2BBA5D9A00EC1F14 /* ChampionsViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412C4BB2BBA5D9A00EC1F14 /* ChampionsViewScreen.swift */; };
 		8412C4BF2BBAE5A600EC1F14 /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412C4BE2BBAE5A600EC1F14 /* Champion.swift */; };
 		8412C4C22BBAE61000EC1F14 /* ChampionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412C4C12BBAE61000EC1F14 /* ChampionsService.swift */; };
@@ -31,13 +28,10 @@
 
 /* Begin PBXFileReference section */
 		38BCEC195A5FB68BAE07CF25 /* Pods_LeagueOfLegendsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeagueOfLegendsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-<<<<<<< HEAD
 		840AE79B2BBB3D820076F89E /* ChampionDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionDetailController.swift; sourceTree = "<group>"; };
 		840AE79D2BBC31710076F89E /* ChampionDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionDetailScreen.swift; sourceTree = "<group>"; };
 		840AE79F2BBC434D0076F89E /* ChampionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionDetail.swift; sourceTree = "<group>"; };
 		840AE7A12BBC43620076F89E /* ChampionDetailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionDetailData.swift; sourceTree = "<group>"; };
-=======
->>>>>>> main
 		8412C4BB2BBA5D9A00EC1F14 /* ChampionsViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsViewScreen.swift; sourceTree = "<group>"; };
 		8412C4BE2BBAE5A600EC1F14 /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		8412C4C12BBAE61000EC1F14 /* ChampionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionsService.swift; sourceTree = "<group>"; };
@@ -51,10 +45,7 @@
 		842A4DA22BBA550800AF602D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842A4DA52BBA550800AF602D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		842A4DA72BBA550800AF602D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		8491000D2BBEEE2600799E63 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
-=======
->>>>>>> main
 		EDCB084C9BD117B79735859D /* Pods-LeagueOfLegendsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeagueOfLegendsApp.debug.xcconfig"; path = "Target Support Files/Pods-LeagueOfLegendsApp/Pods-LeagueOfLegendsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F0984580D435650C5175E2C6 /* Pods-LeagueOfLegendsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeagueOfLegendsApp.release.xcconfig"; path = "Target Support Files/Pods-LeagueOfLegendsApp/Pods-LeagueOfLegendsApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,11 +118,8 @@
 			children = (
 				8412C4BE2BBAE5A600EC1F14 /* Champion.swift */,
 				8412C4C92BBB202300EC1F14 /* ChampionsData.swift */,
-<<<<<<< HEAD
 				840AE79F2BBC434D0076F89E /* ChampionDetail.swift */,
 				840AE7A12BBC43620076F89E /* ChampionDetailData.swift */,
-=======
->>>>>>> main
 			);
 			path = Model;
 			sourceTree = "<group>";
