@@ -14,15 +14,46 @@ class ChampionsViewController: UIViewController {
     var championsFiltered: [Champion]?
     var service = ChampionsService()
     
+    var isDarkMode = false
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAllRequest()
+        isDarkMode = defaults.bool(forKey: "isDarkMode")
+        setupStyle()
     }
     
     override func loadView() {
         screen = ChampionsViewScreen()
         screen?.configureTextFieldDelegate(delegate: self)
+        screen?.delegate(delegate: self)
         view = screen
+    }
+    
+    private func setupStyle() {
+        let iconName = isDarkMode ? "sun.max.fill" : "moon.fill"
+        
+        UIView.animate(withDuration: 1) { () in
+            self.screen?.darkModeButton.setImage(UIImage(systemName: iconName)?.withRenderingMode(.alwaysTemplate), for: .normal)
+            self.screen?.collectionView.reloadData()
+
+            if self.isDarkMode {
+                self.screen?.searchTextField.backgroundColor = .white
+                self.screen?.searchTextField.textColor = .black
+                self.screen?.searchIcon.tintColor = .white
+                self.screen?.backgroundColor = .black
+                self.screen?.darkModeButton.imageView?.tintColor = .white
+                self.screen?.collectionView.backgroundColor = .black
+            } else {
+                self.screen?.searchTextField.backgroundColor = .black
+                self.screen?.searchTextField.textColor = .white
+                self.screen?.backgroundColor = .white
+                self.screen?.searchIcon.tintColor = .black
+                self.screen?.darkModeButton.imageView?.tintColor = .black
+                self.screen?.collectionView.backgroundColor = .white
+            }
+        }
     }
     
     func fetchAllRequest() {
@@ -57,7 +88,7 @@ extension ChampionsViewController: UICollectionViewDelegate, UICollectionViewDat
         let champion = championsFiltered![indexPath.row] as Champion
         
         cell?.imageView.sd_setImage(with: URL(string: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/\(champion.id)_0.jpg"), placeholderImage: UIImage(named: "placeholder.png"))
-        cell?.setupCell(champion: champion)
+        cell?.setupCell(champion: champion, isDarkMode: isDarkMode)
         return cell ?? UICollectionViewCell()
     }
     
@@ -65,6 +96,7 @@ extension ChampionsViewController: UICollectionViewDelegate, UICollectionViewDat
         let vc = ChampionDetailController()
         let selectedChampion = championsFiltered![indexPath.row]
         vc.championId = selectedChampion.id
+        vc.isDarkMode = isDarkMode
         navigationController?.pushViewController(vc, animated: true)
         print(indexPath.row)
     }
@@ -75,7 +107,6 @@ extension ChampionsViewController: UITextFieldDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         guard let text = textField.text else {return}
         
-        
         if !text.isEmpty {
             championsFiltered = champions?.filter({ champion in
                 return champion.name.contains(text)
@@ -84,8 +115,17 @@ extension ChampionsViewController: UITextFieldDelegate {
             championsFiltered = champions
         }
         
-        
-        
         screen?.collectionView.reloadData()
     }
+}
+
+extension ChampionsViewController: ChampionsViewScreenProtocol {
+    func darkModeTapped() {
+        isDarkMode = isDarkMode ? false : true
+        setupStyle()
+        
+        defaults.set(isDarkMode, forKey: "isDarkMode")
+    }
+    
+    
 }

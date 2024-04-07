@@ -23,6 +23,7 @@
 		842A4D9E2BBA550600AF602D /* ChampionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A4D9D2BBA550600AF602D /* ChampionsViewController.swift */; };
 		842A4DA32BBA550800AF602D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842A4DA22BBA550800AF602D /* Assets.xcassets */; };
 		842A4DA62BBA550800AF602D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842A4DA42BBA550800AF602D /* LaunchScreen.storyboard */; };
+		847797F82BC34FBE007F7BD3 /* UILabelCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847797F72BC34FBE007F7BD3 /* UILabelCustom.swift */; };
 		8491000E2BBEEE2600799E63 /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491000D2BBEEE2600799E63 /* UITextField + Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		842A4DA22BBA550800AF602D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842A4DA52BBA550800AF602D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		842A4DA72BBA550800AF602D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		847797F72BC34FBE007F7BD3 /* UILabelCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelCustom.swift; sourceTree = "<group>"; };
 		8491000D2BBEEE2600799E63 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
 		EDCB084C9BD117B79735859D /* Pods-LeagueOfLegendsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeagueOfLegendsApp.debug.xcconfig"; path = "Target Support Files/Pods-LeagueOfLegendsApp/Pods-LeagueOfLegendsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F0984580D435650C5175E2C6 /* Pods-LeagueOfLegendsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeagueOfLegendsApp.release.xcconfig"; path = "Target Support Files/Pods-LeagueOfLegendsApp/Pods-LeagueOfLegendsApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		842A4D982BBA550600AF602D /* LeagueOfLegendsApp */ = {
 			isa = PBXGroup;
 			children = (
+				847797F62BC34F89007F7BD3 /* Components */,
 				8412C4C62BBAF7CD00EC1F14 /* Extensions */,
 				8412C4C02BBAE5FA00EC1F14 /* Service */,
 				8412C4BD2BBAE59500EC1F14 /* Model */,
@@ -182,6 +185,14 @@
 				842A4DA72BBA550800AF602D /* Info.plist */,
 			);
 			path = LeagueOfLegendsApp;
+			sourceTree = "<group>";
+		};
+		847797F62BC34F89007F7BD3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				847797F72BC34FBE007F7BD3 /* UILabelCustom.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		A63BC95F2F634D5082A9D852 /* Frameworks */ = {
@@ -325,6 +336,7 @@
 				8412C4BC2BBA5D9A00EC1F14 /* ChampionsViewScreen.swift in Sources */,
 				8412C4CA2BBB202300EC1F14 /* ChampionsData.swift in Sources */,
 				8412C4C52BBAE91100EC1F14 /* ChampionsCollectionViewCell.swift in Sources */,
+				847797F82BC34FBE007F7BD3 /* UILabelCustom.swift in Sources */,
 				840AE79C2BBB3D820076F89E /* ChampionDetailController.swift in Sources */,
 				842A4D9A2BBA550600AF602D /* AppDelegate.swift in Sources */,
 				840AE79E2BBC31710076F89E /* ChampionDetailScreen.swift in Sources */,

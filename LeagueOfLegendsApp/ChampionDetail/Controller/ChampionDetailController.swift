@@ -14,17 +14,31 @@ class ChampionDetailController: UIViewController {
     var championDetail: ChampionDetail?
     var championId: String?
     
+    var isDarkMode: Bool?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         fetchAllRequest()
+        setupStyle()
     }
     
     override func loadView() {
         screen = ChampionDetailScreen()
         view = screen
+
     }
     
+    private func setupStyle() {
+        let color = isDarkMode! ? UIColor.white : UIColor.black
+        let backgroundColor = isDarkMode! ? UIColor.black : UIColor.white
+        
+        screen?.nameLabel.textColor = color
+        screen?.loreLabel.textColor = color
+        screen?.subtitleLabel.textColor = color
+        
+        screen?.backgroundColor = backgroundColor
+    }
     
     func fetchAllRequest() {
         service.getChampionDetail(championId: self.championId ?? "Akali") { championDetailData, error in

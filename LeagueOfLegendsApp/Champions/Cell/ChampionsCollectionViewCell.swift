@@ -18,11 +18,10 @@ class ChampionsCollectionViewCell: UICollectionViewCell {
         return image
     }()
     
-    let nameLabel: UILabel = {
-        let label = UILabel()
+    let nameLabel: UILabelCustom = {
+        let label = UILabelCustom()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        label.textColor = .white
         return label
     }()
     
@@ -37,8 +36,14 @@ class ChampionsCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupCell(champion: Champion) {
+    func setupCell(champion: Champion, isDarkMode: Bool) {
         nameLabel.text = champion.name
+        
+        if isDarkMode {
+            nameLabel.textColor = .white
+        } else {
+            nameLabel.textColor = .black
+        }
     }
     
     private func addElements() {

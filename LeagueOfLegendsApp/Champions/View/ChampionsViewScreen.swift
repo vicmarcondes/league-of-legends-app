@@ -7,7 +7,17 @@
 
 import UIKit
 
+protocol ChampionsViewScreenProtocol: AnyObject {
+    func darkModeTapped()
+}
+
 class ChampionsViewScreen: UIView {
+    
+    private weak var delegate: ChampionsViewScreenProtocol?
+    
+    func delegate(delegate: ChampionsViewScreenProtocol) {
+        self.delegate = delegate
+    }
     
     lazy var searchIcon: UIImageView = {
         let image = UIImageView()
@@ -29,6 +39,18 @@ class ChampionsViewScreen: UIView {
         tf.addLeftPadding(paddingValue: 8)
         tf.addRightPadding(paddingValue: 8)
         return tf
+    }()
+    
+    lazy var darkModeButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(
+            UIImage(systemName: "sun.max.fill")?.withRenderingMode(.alwaysTemplate)
+            , for: .normal)
+        button.imageView?.tintColor = .white
+        button.addTarget(self, action: #selector(darkModeTapped), for: .touchUpInside)
+//        button.imageView?.backgroundColor = .white
+        return button
     }()
     
     lazy var collectionView: UICollectionView = {
@@ -65,10 +87,15 @@ class ChampionsViewScreen: UIView {
         searchTextField.delegate = delegate
     }
     
+    @objc private func darkModeTapped() {
+        delegate?.darkModeTapped()
+    }
+    
     private func addElements() {
         addSubview(collectionView)
         addSubview(searchIcon)
         addSubview(searchTextField)
+        addSubview(darkModeButton)
     }
     
     private func configContraints() {
@@ -80,8 +107,14 @@ class ChampionsViewScreen: UIView {
             
             searchTextField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 4),
             searchTextField.leadingAnchor.constraint(equalTo: searchIcon.trailingAnchor, constant: 16),
-            searchTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            searchTextField.trailingAnchor.constraint(equalTo: darkModeButton.leadingAnchor, constant: -16),
             searchTextField.heightAnchor.constraint(equalToConstant: 36),
+            
+            darkModeButton.widthAnchor.constraint(equalToConstant: 36),
+            darkModeButton.heightAnchor.constraint(equalToConstant: 36),
+            darkModeButton.centerYAnchor.constraint(equalTo: searchTextField.centerYAnchor),
+            darkModeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+
             
             collectionView.topAnchor.constraint(equalTo: searchIcon.bottomAnchor, constant: 16),
             collectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -16),
